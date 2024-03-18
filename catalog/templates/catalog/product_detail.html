@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>{{ product.name }}</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <style>
+        /* CSS для изображений в слайдере */
+        .slider img {
+            max-width: 80%; /* Максимальная ширина изображения - 100% от родительского элемента */
+            max-height: 80vh; /* Максимальная высота изображения - 100% высоты видимой области экрана */
+            margin: 0 auto; /* Центрирование изображения по горизонтали */
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <!-- Слайдер изображений -->
+    <div class="slider">
+        <div><img src="{{ product.image }}" alt="{{ product.name }}"></div>
+        {% for image in product.images %}
+            <div><img src="{{ image }}" alt="{{ product.name }}"></div>
+        {% endfor %}
+        <!-- Дополнительные изображения добавляйте здесь -->
+    </div>
+    <p>Price: {{ product.price }}</p>
+    <p>Description: {{ product.description }}</p>
+
+    <!-- Подключаем скрипты Slick Carousel -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Инициализируем слайдер
+            $('.slider').slick({
+                // Опции слайдера
+                infinite: true,
+                slidesToShow: 1, // Отображать по одному слайду за раз
+                slidesToScroll: 1, // Прокручивать по одному слайду за раз
+                dots: true, // Показывать точки навигации
+                responsive: [
+                    {
+                        breakpoint: 768, // Если ширина экрана меньше 768px
+                        settings: {
+                            slidesToShow: 1, // Отображать по одному слайду за раз
+                            slidesToScroll: 1 // Прокручивать по одному слайду за раз
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

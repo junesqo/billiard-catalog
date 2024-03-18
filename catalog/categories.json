@@ -1,0 +1,13 @@
+[
+    {"id": 1, "name": "Бильярдные столы", "image": "static/catalog/img/image1.png"},
+    {"id": 2, "name": "Киевницы и полки для шаров", "image": "static/catalog/img/image2.png"},
+    {"id": 3, "name": "Кии и древки", "image": "static/catalog/img/image3.png"},
+    {"id": 4, "name": "Светильники", "image": "static/catalog/img/image4.png"},
+    {"id": 5, "name": "Шары", "image": "static/catalog/img/image5.png"},
+    {"id": 6, "name": "Аксессуары для стола", "image": "static/catalog/img/image6.png"},
+    {"id": 7, "name": "Аксессуары для кия", "image": "static/catalog/img/image7.png"},
+    {"id": 8, "name": "Аксессуары для игрока", "image": "static/catalog/img/image8.png"},
+    {"id": 9, "name": "Сукно", "image": "static/catalog/img/image9.png"},
+    {"id": 10, "name": "Чехлы и тубусы", "image": "static/catalog/img/image10.png"},
+    {"id": 11, "name": "Все комплектующие", "image": "static/catalog/img/image11.png"}
+]
